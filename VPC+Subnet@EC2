@@ -1,0 +1,44 @@
+My notes for this task:) 
+***********************
+
+
+Task Name: Create VPC with subnets and launch in the EC2 instance.
+
+//Services used,
+*VPC
+*Internet Gateway
+*EC2
+_____________________________________________________________________
+ ------------------------------------------------------------------------
+ 
+ 1. In the search bar search VPC and go to VPC screen
+ 2.Now click VPC & click create VPC on the top right, which will redirect to the create VPC page.
+ 3.In the name tag enter the required name(for ex, siva-vpc)
+ 4.In the IPv4 CIDR block select 10.0.0.0/24
+ 5.In the IPv6 CIDR block select No IPv4 CID block.
+ 6.Choose Tenancy as Default.
+ 7.In the Tags option enter any key name and value(please enter both also although it is optional)
+ 8.After creating the subnet, click on the subnet(left side) and create subnet.
+ 9.Click on the VPC ID box your ID with your VPC name appears, and Select it.
+ 10.And the associated VPC CIDRs will be 10.0.0.0/24.
+ 11.Typer your Subnet name(For ex siva-subnet-01).
+ 12.Avail Zone as No preference, & choose IPv4 CIDR block as 10.0.0.0/25
+ 13.Type value as siva-subnet-01.
+ 14.Click add new SUbnet, Similarly create other subnet but some changes are in the PIPv4 block choose 10.0.0.0/25 and create value as previous sivaa-subnet-02.
+ 17.After creating subnet you will see the screen available status of your subnets.
+ 
+ 
+ 
+ 
+ 18.Now create an internet gateway for connecting to the EC2 instance,and then attach the VPC to the VPC created above.
+ 19.Clickon internet gateway in the search bar you will find a screen,In the name tag type siva-igw & enter tag value as siva igw.
+ 20.If you click box under available VPCs y'll find yours, and click attach.
+ 21.Go to Route Tables->Edit Routes and add and add the internet gateway by clicking on add route
+ 22.Type 0.0.0.0/0 in the address box and select your route tables in the target.
+ 
+ 
+ 
+ 23.Now create EC2 instance (Amazon Linux 2 AMI)available in free tier and come to Configure instance details screen.
+ 24.With No of instance as 1,   Choose your siva-vpc in network and mainly enable the auto assign public IP and create the instance.
+ 25.Cick on connect button available in your instance.You will get the console screen.
+ 
